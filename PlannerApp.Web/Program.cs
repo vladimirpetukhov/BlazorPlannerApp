@@ -8,6 +8,7 @@ namespace PlannerApp.Web
     using System.Threading.Tasks;
     using PlannerApp.Shared.Services;
     using Blazored.LocalStorage;
+    using Microsoft.AspNetCore.Components.Authorization;
     #endregion
 
     public class Program
@@ -29,6 +30,7 @@ namespace PlannerApp.Web
             builder.Services.AddBlazoredLocalStorage();
             builder.Services.AddOptions();
             builder.Services.AddAuthorizationCore();
+            builder.Services.AddScoped<AuthenticationStateProvider, LocalAuthenticationStateProvider>();
 
             await builder.Build().RunAsync();
         }
