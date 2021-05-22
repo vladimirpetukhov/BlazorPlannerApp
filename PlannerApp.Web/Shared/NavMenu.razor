@@ -1,5 +1,5 @@
 ﻿<div class="top-row pl-4 navbar navbar-dark">
-    <a class="navbar-brand" href="">PlannerApp.Web</a>
+    <a class="navbar-brand" href="">Planner App</a>
     <button class="navbar-toggler" @onclick="ToggleNavMenu">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -13,25 +13,23 @@
             </NavLink>
         </li>
         <li class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="oi oi-plus" aria-hidden="true"></span> Counter
+            <NavLink class="nav-link" href="plans">
+                <span class="oi oi-pencil" aria-hidden="true"></span> Plans
             </NavLink>
         </li>
         <li class="nav-item px-3">
-            <NavLink class="nav-link" href="fetchdata">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
+            <NavLink class="nav-link" href="calender">
+                <span class="oi oi-person" aria-hidden="true"></span> Scheduler
             </NavLink>
         </li>
     </ul>
 </div>
 
-@code {
-    private bool collapseNavMenu = true;
+@code { private bool collapseNavMenu = true;
 
-    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+            private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
 
-    private void ToggleNavMenu()
-    {
-        collapseNavMenu = !collapseNavMenu;
-    }
-}
+            private void ToggleNavMenu()
+            {
+                collapseNavMenu = !collapseNavMenu;
+            } }

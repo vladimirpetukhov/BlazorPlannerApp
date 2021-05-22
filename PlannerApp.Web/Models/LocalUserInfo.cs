@@ -1,4 +1,9 @@
-﻿namespace PlannerApp.Web.Models
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace PlannerApp.Web.Models
 {
     public class LocalUserInfo
     {

@@ -7,6 +7,7 @@ namespace PlannerApp.Shared.Models
 {
     public class RegisterRequest
     {
+
         [Required]
         [StringLength(50)]
         [EmailAddress]
@@ -21,11 +22,12 @@ namespace PlannerApp.Shared.Models
         public string LastName { get; set; }
 
         [Required]
-        [StringLength(50, MinimumLength = 5)]
+        [StringLength(50)]
         public string Password { get; set; }
-
+        
         [Required]
-        [StringLength(50, MinimumLength = 5)]
+        [StringLength(50)]
         public string ConfirmPassword { get; set; }
+
     }
 }

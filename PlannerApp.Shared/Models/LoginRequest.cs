@@ -7,6 +7,8 @@ namespace PlannerApp.Shared.Models
 {
     public class LoginRequest
     {
+
+
         [Required]
         [StringLength(50)]
         [EmailAddress]
@@ -15,6 +17,5 @@ namespace PlannerApp.Shared.Models
         [Required]
         [StringLength(50)]
         public string Password { get; set; }
-
     }
 }
