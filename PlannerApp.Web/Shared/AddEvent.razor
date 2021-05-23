@@ -1,0 +1,17 @@
+@using PlannerApp.Web.Models
+
+<!-- Add Event -->
+            <div class="ms-depth-16 card">
+                <EditForm model="model" OnValidSubmit="AddEventToSelectedDay">
+                <div class="calendar-toolbar">
+                    <button class="toolbar-button" type="submit"><i class="ms-Icon ms-Icon--AddEvent"></i></button>
+                </div>
+
+                <div class="card-content">
+                    <h3 class="ms-fontSize-24 ms-fontWeight-regular">@SelectedDay.Date.ToString("D")</h3>
+                    <input type="text" @bind-value="model.Subject" class="fluent-input" placeholder="Event Subject">
+                    <input type="time" @bind-value="model.StartDate" class="fluent-input" placeholder="Event Subject">
+                    <input type="time" @bind-value="model.EndDate" class="fluent-input" placeholder="Event Subject">
+                </div>
+                </EditForm>
+            </div>
